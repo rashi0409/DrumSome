@@ -1,0 +1,179 @@
+/* Body styling */
+body {
+  background: linear-gradient(135deg, #2980b9, #8e44ad), url("./images/background.jpg"); /* Gradient overlay on the background image */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  color: #ecf0f1; /* Lighter text color for better readability */
+  font-family: 'Arvo', serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+/* Drum button styling */
+.drum {
+  outline: none;
+  border: 10px solid #404B69; /* Initial border color and thickness */
+  font-size: 5rem; /* Font size for text inside the button */
+  font-family: 'Arvo', cursive; /* Font family for text */
+  line-height: 2; /* Line height for text */
+  font-weight: 900; /* Font weight for text */
+  color: #DA0463; /* Text color */
+  text-shadow: 3px 0 #DBEDF3; /* Text shadow effect */
+  border-radius: 15px; /* Rounded corners */
+  display: inline-block; /* Display as inline-block */
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  text-align: center; /* Center text horizontally */
+  margin: 10px; /* Margin around the button */
+  background-color: white; /* Background color */
+  box-shadow: none; /* No shadow */
+  transition: all 0.2s ease-in-out; /* Smoother transition for hover effects */
+  cursor: pointer; /* Pointer cursor for better UX */
+  flex: 1 1 20%; /* Flexible size (if used in a flex container) */
+}
+
+/* Hover effect for drum buttons */
+.drum:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light overlay color on hover */
+  color:#FFB6C1; /* Pinkish-purple color for text on hover */
+  box-shadow: 0 4px #1f4f7b; /* Darker shadow on hover */
+  transform: scale(1.05); /* Slightly enlarged on hover */
+}
+
+/* Active state for drum buttons */
+.drum:active {
+  box-shadow: none; /* Remove shadow on active state */
+  transform: scale(0.95); /* Slightly shrink button on active state */
+  border: 10px solid white; /* White border when pressed */
+}
+
+/* Header styling */
+/* Header styling */
+header {
+  position: absolute;
+  border-bottom: 3px solid white; /* Sea green border */
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: #00008B; /* Semi-transparent sea green background */
+}
+
+/* Title styling remains the same */
+#title {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+  position: relative;
+  padding: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+header:hover #title {
+  color: pink; /* Pinkish-purple color on hover */
+}
+
+
+/* Main content styling */
+main {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex: 1; /* Takes up the remaining space */
+  margin-top: 80px; /* Ensure there's space for the header */
+  margin-bottom: 100px; /* Space below the drum set to make room for footer */
+}
+
+/* Flexbox container for the drum keys */
+.set {
+  display: flex;
+  flex-direction: row; /* Arrange buttons in a row */
+  flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+  max-width: 700px; /* Width for the drum set */
+  height: auto; /* Auto height to accommodate content */
+  margin: 10% auto; /* Center container horizontally with top and bottom margin */
+}
+
+/* Specific button background images */
+.w {
+  background-image: url("./images/tom1.png");
+}
+.a {
+  background-image: url("./images/tom2.png");
+}
+.s {
+  background-image: url("./images/tom3.png");
+}
+.d {
+  background-image: url("./images/tom4.png");
+}
+.j {
+  background-image: url("./images/crash.png");
+}
+.k {
+  background-image: url("./images/kick.png");
+}
+.l {
+  background-image: url("./images/snare.png");
+}
+
+/* Footer styling */
+footer {
+  background-color: #3824b9; /* Purplish background for the footer */
+  color: #ecf0f1; /* Lighter text color for contrast */
+  padding: 20px 0;
+  border-top: 3px solid; /* Vibrant white border for distinction */
+  font-size: 1.5rem; /* Larger font size for better readability */
+  position: fixed; /* Fixes the footer to the bottom of the viewport */
+  bottom: 0; /* Ensures it is positioned at the bottom */
+  left: 0; /* Ensures it covers the entire width */
+  width: 100%; /* Full width */
+  text-align: center; 
+  font-family: 'Lobster', cursive; /* Centered text */
+}
+
+footer p {
+  margin: 10px 0;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+footer p:hover {
+  color: #FFB6C1; /* Pinkish-purple color on hover */
+}
+
+footer p.music-icon {
+  color: #ffffff; /* White color for the music icon */
+}
+
+.music-icon {
+  font-size: 2rem; /* Larger icon size for better visibility */
+  color: #ffffff; /* White color for the icon */
+  animation: pulse 2s infinite; /* Added pulsing effect */
+}
+.music-icon:hover{
+  color:   #FFB6C1;
+}
+/* Pulse animation for the music icon */
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
